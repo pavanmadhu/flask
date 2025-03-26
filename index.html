@@ -22,7 +22,7 @@
     <script>
         async function fetchPlayers() {
 			try {
-				const response = await fetch("https://corsproxy.io/?https://fantasy.iplt20.com/classic/api/feed/live/gamedayplayers?lang=en&tourgamedayId=6&teamgamedayId=6&liveVersion=474&announcedVersion=03262025155403");
+				const response = await fetch("https://fantasy.iplt20.com/classic/api/feed/live/gamedayplayers?lang=en&tourgamedayId=6&teamgamedayId=6&liveVersion=474&announcedVersion=03262025155403");
 				const data = await response.json();
 				console.log(data);
 			} catch (error) {
