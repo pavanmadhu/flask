@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPL Fantasy Players</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .player {
+            margin-bottom: 10px;
+        }
+        .team {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>IPL Fantasy Players</h1>
+    <div id="players-list"></div>
+
+    <script>
+        async function fetchPlayers() {
+			try {
+				const response = await fetch("https://corsproxy.io/?https://fantasy.iplt20.com/classic/api/feed/live/gamedayplayers?lang=en&tourgamedayId=6&teamgamedayId=6&liveVersion=474&announcedVersion=03262025155403");
+				const data = await response.json();
+				console.log(data);
+			} catch (error) {
+				console.error("Error fetching players:", error);
+			}
+		}
+
+        fetchPlayers();
+    </script>
+</body>
+</html>
